@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap");
+
+/* Make width and height include padding and border */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-weight: 300;
+  background: #143731;
+  color: #e9f3ee;
+}
+
+/* centers the title area */
+header {
+  text-align: center;
+  padding: 56px 15px 36px;
+}
+
+/* big title */
+header h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: #ceff8c;
+}
+
+/* small uppercase subtitle under the title */
+header p {
+  margin: 10px 0 0;
+  font-size: 13px;
+  letter-spacing: 3px; /* space between letters */
+  text-transform: uppercase;
+  opacity: 0.6; /* makes it softer look */
+}
+
+
+/* keep content in the center */
+main {
+  max-width: 520px;
+  margin: 0 auto 40px;
+  padding: 0 18px;
+}
+
+/* (section card) thi outline with lots of space */
+.box {
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(206, 255, 140, 0.3); /* soft lime border */
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03); /* very light tint */
+}
+
+/*  headings (Student List, Add / Remove, etc.) */
+h2 {
+  margin: 0 0 16px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #ceff8c;
+}
+
+/* small pill that shows the number of students */
+.badge {
+  margin-left: 8px;
+  padding: 2px 10px;
+  border: 1px solid #ceff8c;
+  border-radius: 20px;
+  letter-spacing: 0;
+}
+
+/* remove the default bullets and spacing */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* (student row) index number + name side by side */
+li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* thin divider line */
+  font-size: 16px;
+}
+
+/* no divider to the last student */
+li:last-child {
+  border-bottom: none;
+}
+
+/* the index number (0, 1, 2...) */
+li span {
+  width: 24px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  color: #ceff8c;
+}
+
+/* puts the input and buttons on one line */
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* moves to next line on small screens */
+}
+
+/* a line at the bottom */
+input {
+  flex: 1; /* take the extra space */
+  min-width: 140px;
+  padding: 11px 4px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid rgba(206, 255, 140, 0.5);
+  font: inherit; /* use the same font as the page */
+}
+
+/* faded hint text inside the input */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* when clicked, remove default outline, brighten the line */
+input:focus {
+  outline: none;
+  border-bottom-color: #ceff8c;
+}
+
+/* main buttons */
+button {
+  padding: 11px 20px;
+  background: #ceff8c;
+  color: #143731;
+  border: 1px solid #ceff8c;
+  border-radius: 30px; /* makes it round */
+  font: 500 13px "Poppins", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer; /* hand icon on hover */
+  transition: 0.2s; /* smooth color change */
+}
+
+/* swap to outline style */
+button:hover {
+  background: transparent;
+  color: #ceff8c;
+}
+
+/* second button style (Remove Last, toString): outline by default */
+button.light {
+  background: transparent;
+  color: #ceff8c;
+}
+
+/* swap to filled style */
+button.light:hover {
+  background: #ceff8c;
+  color: #143731;
+}
+
+
+/* light tint and a full border */
+.result {
+  background: rgba(206, 255, 140, 0.08);
+  border-color: #ceff8c;
+}
+
+/* big white serif text */
+.result p {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  word-break: break-word; /* long text wraps instead of overflowing */
+}

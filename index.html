@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Class Record Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- top banner -->
+    <header>
+      <h1>Class Record Manager</h1>
+      <p>A simple way to keep your class in order</p>
+    </header>
+
+    <main>
+      <!-- list of students and how many there are -->
+      <div class="box">
+        <h2>Student List <span class="badge" id="count"></span></h2>
+        <ul id="list"></ul>
+      </div>
+
+      <!-- add and remove -->
+      <div class="box">
+        <h2>Add / Remove</h2>
+        <div class="row">
+          <input type="text" id="nameInput" placeholder="Enter student name" />
+          <button onclick="onAdd()">Add</button>
+          <button class="light" onclick="onRemove()">Remove Last</button>
+        </div>
+      </div>
+
+      <!-- find by index -->
+      <div class="box">
+        <h2>Find by Index</h2>
+        <div class="row">
+          <input
+            type="number"
+            id="indexInput"
+            placeholder="Enter index (0, 1, 2...)"
+          />
+          <button onclick="onFind()">Find</button>
+        </div>
+      </div>
+
+      <!-- join and toString -->
+      <div class="box">
+        <h2>Show as One String</h2>
+        <div class="row">
+          <input type="text" id="separator" value=" | " title="Separator" />
+          <button onclick="onJoin()">Join</button>
+          <button class="light" onclick="onToString()">toString</button>
+        </div>
+      </div>
+
+      <!-- results -->
+      <div class="box result">
+        <h2>Result</h2>
+        <p id="result">Click a button to see the result.</p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
